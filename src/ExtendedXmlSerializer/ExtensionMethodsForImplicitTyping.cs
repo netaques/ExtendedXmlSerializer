@@ -208,7 +208,7 @@ namespace ExtendedXmlSerializer
 		/// <param name="this">The configuration container to configure.</param>
 		/// <returns>The configured configuration container.</returns>
 		/// <seealso cref="EnableImplicitTyping(IConfigurationContainer,System.Type[])"/>
-		public static IConfigurationContainer EnableImplicitTypingByInspecting<T>(
+		public static IConfigurationContainer EnableImplicitTypingPropertyTypes<T>(
 			this IConfigurationContainer @this)
 			=> @this.EnableImplicitTyping(new InspectedPropertyTypes<T>());
 
@@ -222,7 +222,7 @@ namespace ExtendedXmlSerializer
 		/// <param name="type">The subject type to query for type resolution.</param>
 		/// <returns>The configured configuration container.</returns>
 		/// <seealso cref="EnableImplicitTyping(IConfigurationContainer,System.Type[])"/>
-		public static IConfigurationContainer EnableImplicitTypingByInspecting(
+		public static IConfigurationContainer EnableImplicitTypingPropertyTypes(
 			this IConfigurationContainer @this, Type type)
 			=> @this.EnableImplicitTyping(new InspectedPropertyTypes(type));
 	}
